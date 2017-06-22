@@ -6,12 +6,13 @@ Many thanks to user @Domo89 on the French easydomoticz forum who investigated th
 
 Author: Logread (aka 999LV on GitHub)
 Version:    0.0.1: alpha
+            0.0.2: minor big fixes, slight change in pollutants color scale
 """
 """
-<plugin key="PrevAir" name="PrevAir France Air Quality Monitoring" author="logread" version="0.0.1" wikilink="http://www.domoticz.com/wiki/plugins/plugin.html" externallink="www.prevair.org">
+<plugin key="PrevAir" name="PrevAir France Air Quality Monitoring" author="logread" version="0.0.2" wikilink="http://www.domoticz.com/wiki/plugins/plugin.html" externallink="www.prevair.org">
     <params>
         <param field="Mode1" label="Prevair Station code" width="100px" required="false" default=""/>
-        <param field="Mode2" label="Update period (hours)" width="25px" required="true" default=""/>
+        <param field="Mode2" label="Update period (hours)" width="25px" required="true" default="1"/>
         <param field="Mode6" label="Debug" width="75px">
             <options>
                 <option label="True" value="Debug"/>
@@ -59,10 +60,10 @@ class BasePlugin:
         self.pollutants.append(polluant("Indice Global Demain", "ID", "", 0, 0, 4, 8, 2, 1))
         self.pollutants.append(polluant("SO2", "01", "µg/m3", 0, 0, 159, 300, 3, 0))
         self.pollutants.append(polluant("NO2", "03", "µg/m3", 0, 0, 109, 200, 4, 0))
-        self.pollutants.append(polluant("CO", "04", "mg/m3", 0, 0, 25, 50, 5, 0))
+        self.pollutants.append(polluant("CO", "04", "mg/m3", 0, 0, 6, 10, 5, 0))
         self.pollutants.append(polluant("O3", "08", "µg/m3", 0, 0, 104, 180, 6, 0))
         self.pollutants.append(polluant("PM10", "24", "µg/m3", 0, 0, 39, 80, 7, 0))
-        self.pollutants.append(polluant("PM25", "39", "µg/m3", 0, 0, 10, 25, 8, 0))
+        self.pollutants.append(polluant("PM25", "39", "µg/m3", 0, 0, 29, 60, 8, 0))
         return
 
     def onStart(self):
