@@ -10,7 +10,7 @@ Version:    0.0.1: alpha
             0.0.3: fixed unit error in CO color scale
 """
 """
-<plugin key="PrevAir" name="PrevAir France Air Quality Monitoring" author="logread" version="0.0.3" wikilink="http://www.domoticz.com/wiki/plugins/plugin.html" externallink="www.prevair.org">
+<plugin key="PrevAir" name="PrevAir France Air Quality Monitoring" author="logread" version="0.0.3" wikilink="http://www.domoticz.com/wiki/plugins/plugin.html" externallink="http://www.prevair.org">
     <params>
         <param field="Mode1" label="Prevair Station code" width="100px" required="false" default=""/>
         <param field="Mode2" label="Update period (hours)" width="25px" required="true" default="1"/>
